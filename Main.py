@@ -16,71 +16,33 @@ class Solution:
 
     def is_stack_full(self):
         return self.top==self.size-1
-
-
     def is_queue_full(self):
-        """
-        Check whether the queue is full.
-        Returns:
-          True if it is full, else returns False.
-        """
-        return self.rear==self.size-1
+        return self.rear == self.size - 1
 
     def push_character(self, character):
-        """
-        Push the character to stack, if stack is not full.
-        Arguments:
-            character: A character that will be pushed to the stack.
-        """
-        if self.is_stack_full()==False:
-            
-            self.top+=1
-            self.stack[self.top]=character
-
+        if not self.is_stack_fullO:
+            self.stack.append(character)
+            self.top += 1
 
     def enqueue_character(self, character):
-        """
-        Enqueue the character to queue, if queue is not full.
-        Arguments:
-            character: A character that will be enqueued to queue.
-        """
-        if self.is_queue_full()==False:
-            if self.front==-1:
-                self.front=0
-            self.rear+=1
-            self.queue[self.rear]=character
-
+        if not self.is_queue_fullQ:
+            if self.front == -1:
+            self.front = 0
+        self.rear += |
+        self.queue.append(character)
 
     def pop_character(self):
-        """
-        Do pop operation if the stack is not empty.
-        Returns:
-          The data that is popped out if the stack is not empty.
-        """
-        if self.is_stack_empty()==False:
-            x=self.stack[self.top]
-            self.top-=1
-            return x
-
+        if not self.is_stack_emptyQ:
+            self.top -= 1
+        return self.stack.pop(self.top + 1)
 
     def dequeue_character(self):
-        """
-        Do dequeue operation if the queue is not empty.
-        Returns:
-          The data that is dequeued if the queue is not empty.
-        """
-        if self.is_queue_empty()==False:
-            x=self.queue[self.front]
-            if self.front==self.rear:
-                self.front=-1
-                self.rear=-1
-            else:
-                self.front+=1
-            return x
-
+        if not self.is_queue_empty(Q):
+            self.front += 1
+        return self.queue[self.front - 1]
 
 # read the string text
-text = input()
+text = inputQ)
 
 # find the length of text
 length_of_text = len(text)
@@ -89,25 +51,18 @@ length_of_text = len(text)
 solution = Solution(length_of_text)
 
 # push/enqueue all the characters of string text to stack
+
 for index in range(length_of_text):
     solution.push_character(text[index])
     solution.enqueue_character(text[index])
 
 is_palindrome = True
-'''
-pop the top character from stack
-dequeue the first character from queue
-compare both characters
-If the comparison fails, set is_palindrome as False.
-'''
-
-for i in range(int(length_of_text/2)):
-    if(solution.pop_character()!=solution.dequeue_character()):
-        is_palindrome=False
-
-
+for index in range(length_of_text):
+    if solution.pop_character() != solution.dequeue_character():
+        is_palindrome = False
 # finally print whether string text is palindrome or not.
+
 if is_palindrome:
-    print("The word, " + text + ", is a palindrome.")
+    print("The word, " + text + ", is a palindrome.”)
 else:
-    print("The word, " + text + ", is not a palindrome.")
+    print("The word, " + text +", is not a palindrome.”)
