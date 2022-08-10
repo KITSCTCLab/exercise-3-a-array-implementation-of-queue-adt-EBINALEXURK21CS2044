@@ -27,7 +27,7 @@ class Solution:
     def enqueue_character(self, character):
         if not self.is_queue_fullQ:
             if self.front == -1:
-            self.front = 0
+                self.front = 0
         self.rear += |
         self.queue.append(character)
 
