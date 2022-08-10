@@ -28,7 +28,7 @@ class Solution:
         if not self.is_queue_fullQ:
             if self.front == -1:
                 self.front = 0
-        self.rear += |
+        self.rear += 1
         self.queue.append(character)
 
     def pop_character(self):
@@ -42,7 +42,7 @@ class Solution:
         return self.queue[self.front - 1]
 
 # read the string text
-text = inputQ)
+text = input
 
 # find the length of text
 length_of_text = len(text)
@@ -63,6 +63,6 @@ for index in range(length_of_text):
 # finally print whether string text is palindrome or not.
 
 if is_palindrome:
-    print("The word, " + text + ", is a palindrome.”)
+    print("The word, " + text + ", is a palindrome.")
 else:
-    print("The word, " + text +", is not a palindrome.”)
+    print("The word, " + text +", is not a palindrome.")
