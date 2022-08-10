@@ -1,8 +1,8 @@
 class Solution:
     # Write your code here
     def _init_(self, size):
-        self.stack = [None]*size
-        self.queue = [None]*size
+        self.stack = []
+        self.queue = []
         self.size = size
         self.top = -1
         self.rear = -1
