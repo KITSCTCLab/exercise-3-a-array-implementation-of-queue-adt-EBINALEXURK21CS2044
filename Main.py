@@ -20,24 +20,24 @@ class Solution:
         return self.rear == self.size - 1
 
     def push_character(self, character):
-        if not self.is_stack_fullO:
+        if not self.is_stack_full():
             self.stack.append(character)
             self.top += 1
 
     def enqueue_character(self, character):
-        if not self.is_queue_fullQ:
+        if not self.is_queue_full():
             if self.front == -1:
                 self.front = 0
         self.rear += 1
         self.queue.append(character)
 
     def pop_character(self):
-        if not self.is_stack_emptyQ:
+        if not self.is_stack_empty():
             self.top -= 1
         return self.stack.pop(self.top + 1)
 
     def dequeue_character(self):
-        if not self.is_queue_empty(Q):
+        if not self.is_queue_empty():
             self.front += 1
         return self.queue[self.front - 1]
 
