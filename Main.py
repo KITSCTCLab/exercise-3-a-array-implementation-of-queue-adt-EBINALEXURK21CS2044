@@ -42,7 +42,7 @@ class Solution:
         return self.queue[self.front - 1]
 
 # read the string text
-text = input
+text = input()
 
 # find the length of text
 length_of_text = len(text)
